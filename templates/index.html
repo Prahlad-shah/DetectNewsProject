@@ -1,25 +1,122 @@
 {% load static %}
-<html>
-    <head>
-        <link href="{%static 'css/styles.css'%}" rel="stylesheet" type = "text/css">
-        <title>NewsClues</title>
-    </head>
-    <body id = "beautify" href = "/">
-        <h1 class="heading nav">
-            <img id="center" height="55px" src="{%static 'icons/news.gif'%}" alt="Logo" />
-            NewsClues
-        </h1>
-        <form id="center" action = "" method="POST" enctype="multipart/form-data">{% csrf_token %}
-            <img height = "500px" src = "{%static 'icons/realfake.jpg'%}" alt = "image">
-            <br>
-            <input height = 100px width = 30px type = "text" id = "news" name = "news" required>
-            <input type = "submit" value = "Verify">    
-        </form>
-        {% if val%}
-        <p id = "text"> <strong id = "large">{{res}} : {{val}}</strong> </p>
-        {% endif %}
-        <a href = "https://github.com/pradyyadav/NewsClues"><img height = "50px" src = "{% static 'icons/github.png' %}" ></a><br><br>
-        <a href = "https://github.com/pradyyadav"><img height = "50px" src = "{% static 'icons/prady.png' %}" ></a><br>
-        <a href="https://github.com/pradyyadav">pradyyadav</a>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Susovit</title>
+    {% include 'partialsmain/head.html' %}
+  </head>
+<body>
+    {% include 'partialsmain/topheader.html' %}
+
+    <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Selecao</span></h2>
+          <p class="animate__animated fanimate__adeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+          <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+  <div class="container d-flex flex-column justify-content-end align-items-center">
+  <div class="card text-center" style="width: 38rem;">
+    <img src="{% static 'icons/realfake.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <form id="center" action = "" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+         <br>
+        <input height = 100px width = 30px type = "text" id = "news" name = "news" required>
+        <input type = "submit" value = "Verify">    
+    </form>
+    {% if val%}
+    <p id = "text"> <strong id = "large">{{res}} : {{val}}</strong> 
+    </p>
+    {% endif %}
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+    </div>
+    <!-- start card - 2 -->
+    <div class="card text-center w-100 my-2">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    <!-- start card - 2 -->
+</section>
+</body>  
+    
+
+  {% include 'partialsmain/footer.html' %}
+  {% include 'partialsmain/script.html' %}
+  
 </html>

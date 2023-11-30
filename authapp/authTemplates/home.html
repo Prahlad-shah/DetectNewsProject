@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+{% include "partialsmain/head.html" %}
+<!-- End of Head -->
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    {% include "partialsmain/topheader.html" %}
+    <!-- End of Sidebar -->
+  
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column mt-5">
+
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-5">
+          
+          <!-- Card Information -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="card-header">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-fw fa-info-circle"></i> Information</h6>
+                </div>
+                <div class="card-body">
+                  Welcome {{user.first_name}} {{user.last_name}} to the world of Logo Analyzer which
+                  is a System that is usefull for designers, business experts and government departments
+                  to check their brand logos and trademarks inorder to prevent from the collision and similar
+                  design patterns from others.
+
+                  It is always hard to design a unique logos and trademarks for an organizations.
+                  A trademark is a distinguishable and recognizable sign, design, or expression that identifies specific products or services of a particular source as distinct from others. A logo is a graphic sign, mark, or symbol used to identify a particular source. It is fair to say that a logo is a type of trademark.
+                  So, check it out before making a decision for logo and trademark designs for your business recognition.
+                
+              </div>
+              <a class="btn btn-primary mt-3 float-right" href="#"><Strong>Upload Image Now </Strong></a>
+                
+            </div>
+          </div>
+          <!-- end card information -->
+
+          <!-- Card Information -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="card-header">
+                  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-fw fa-info-circle"></i> Information</h6>
+                </div>
+                <div class="card-body">
+                  Logo Analyzer System is a reverse image search engine that enables the users to search the logo images by uploading thir original logo see the features that matches to the other existing logo images.
+                </div>
+            </div>
+          </div>
+          <!-- end card information -->
+        </div>
+        <!--End of container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      {% include "partialsmain/footer.html" %}
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Bootstrap & JavaScript Plugins-->
+  {% include "partialsmain/script.html" %}
+
+</body>
+
+</html>

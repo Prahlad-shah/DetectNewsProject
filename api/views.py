@@ -11,5 +11,7 @@ def index(request,*args,**kwargs):
         return render(request,'index.html',{'val':predi,'res':result})
     return render(request,'index.html')
 
+def homePageView(request):
+    return render(request, 'home.html')
 
 # Create your views here.   

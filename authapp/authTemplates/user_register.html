@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+{% include "partialsmain/head.html" %}
+<!-- End of Head -->
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Begin Top Header -->
+    {% include "partialsmain/topheader.html" %}
+    <!-- End of Top Header -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column mt-5">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-5">
+          <!-- Insert Pages -->
+
+          <div class="card text-center mx-auto" style="width: 50rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">NewsDetect</h5>
+              <h3>Registration Form</h3> <hr>
+              <!-- Start your project here-->
+              <div class="container-fluid my-2">
+                <div class="">
+                  <form action="" method="post">
+                    {% csrf_token %}
+                    <!-- <div class="form-group">
+                    {{ form.as_p }}
+                    </div> -->
+                    <div class="form-group my-2">
+                    <label for="first_name">First Name: </label>
+                    {{form.first_name}}
+                    </div>
+                    <div class="form-group my-2">
+                    <label for="last_name">Last Name: </label>
+                    {{form.last_name}}
+                    </div>
+                    <div class="form-group">
+                    <label for="email">Enter Email: </label>
+                    {{form.email}} <br>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group my-2">
+                    <label for="username">Enter UserName: </label>
+                    {{form.username}}
+                    </div>
+                    <div class="form-group">
+                    <label for="password1">Enter Password: </label>
+                    {{form.password1}}
+                    </div>
+                    <div class="form-group my-2">
+                    <label for="password2">Confirm Password: </label>
+                    {{form.password2}}
+                    </div>
+                    <br>
+                    <input class="btn btn-primary w-100 font-weight-bold" type="submit" value="Submit">
+                  </form>
+                </div>
+              </div>
+              <!-- End your project here-->
+
+            </div>
+          </div>
+          <!-- End Pages -->
+
+        </div>
+        <!--End of Page Content -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      {% include "partialsmain/footer.html" %}
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Bootstrap & JavaScript Plugins-->
+  {% include "partialsmain/script.html" %}
+
+</body>
+</html>
+
+
+
+
+   

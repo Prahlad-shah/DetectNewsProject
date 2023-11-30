@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+{% include "partialsmain/head.html" %}
+<!-- End of Head -->
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Begin Top Header -->
+    {% include "partialsmain/topheader.html" %}
+    <!-- End of Top Header -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column mt-5">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-5">
+          <!-- Begin Login -->
+          <div class="card text-center mx-auto mb-5" style="width: 20rem;">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">LogoAnyz</h5>
+              <div>{{ form.non_field_errors }}</div>
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="fieldWrapper">
+                  {{ form.username.errors }}
+                  <div class="font-weight-bold">{{ form.username.label }} </div>
+                  <div class="font-weight-bold">{{ form.username }} </div>
+                </div>
+                <br>
+                <div class="fieldWrapper">
+                  {{ form.password.errors }}
+                  <div class="font-weight-bold">{{ form.password.label }} </div>
+                  <div class="font-weight-bold">{{ form.password }} </div>
+                </div>
+                <br>
+                <input class="btn btn-primary w-100 font-weight-bold" type="submit" value="Login">
+              </form><br>
+              <a href="{% url 'authapp:reset_password'  %}"><button class="btn btn-primary w-100 font-weight-bold">Reset
+                  Password</button>
+              </a><br><br>
+              <p class="font-weight-bold">Don't Have an Account <a href="{% url 'authapp:signup'  %}">Sign Up</a></p>
+            </div>
+          </div>
+          <!-- End Begin Login -->
+
+        </div>
+        <!--End of Page Content -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      {% include "partialsmain/footer.html" %}
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Bootstrap & JavaScript Plugins-->
+  {% include "partialsmain/script.html" %}
+
+</body>
+</html>

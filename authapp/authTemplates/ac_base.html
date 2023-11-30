@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>{% block title %} My Site {% endblock %}</title>
+  <!-- Head -->
+  {% include "pymage/partials/head.html" %}
+  <!-- End of Head -->
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        {% block header %}
+        <!-- Navbar -->
+        <!-- Topbar -->
+        {% include "pymage/partials/topbar.html" %}
+        <!-- End of Topbar -->
+        <!-- End Navbar -->
+        {% endblock %}
+
+        <div id="sidebar">
+          {% block sidebar %}
+
+          {% endblock %}
+        </div>
+
+        <!-- Begin Page Content -->
+        <div class="container">
+
+          <div id="content">
+            {% block content %}Overrite The contents {% endblock %}
+          </div>
+
+        </div>
+        <!-- End container-->
+      </div>
+      <!-- End of Main Content -->
+
+      <div id="footer">
+        {% block footer %}
+        <!-- Footer -->
+        <!-- {% include "pymage/partials/footer.html" %} -->
+        <!-- End of Footer -->
+        {% endblock %}
+      </div>
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <!-- Bootstrap & JavaScript Plugins-->
+  {% include "pymage/partials/plugin.html" %}
+</body>
+
+</html>
