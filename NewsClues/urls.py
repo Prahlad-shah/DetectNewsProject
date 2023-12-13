@@ -22,5 +22,5 @@ from authapp import views as auth
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', include('api.urls')),
-    path('auth/', include('authapp.urls')),
+    path('', include('authapp.urls')),
 ]

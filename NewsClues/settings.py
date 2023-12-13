@@ -138,7 +138,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'authapp:home'
 
 
 # Static files (CSS, JavaScript, Images)

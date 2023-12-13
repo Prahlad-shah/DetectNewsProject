@@ -8,10 +8,6 @@ def index(request,*args,**kwargs):
     if request.method == 'POST':
         info = request.POST['news']
         result,predi = predict(info)    
-        return render(request,'index.html',{'val':predi,'res':result})
+        return render(request,'index.html',{'val':predi,'res':result, 'news': info})
     return render(request,'index.html')
-
-def homePageView(request):
-    return render(request, 'home.html')
-
-# Create your views here.   
+  

@@ -2,7 +2,7 @@
 <header id="header" class="fixed-top d-flex align-items-center header-transparent bg-dark">
   <div class="container d-flex align-items-center justify-content-between">
     <div class="logo">
-      <h1><a href="index.html">NewsDetect</a></h1>
+      <h1><a href="{% url 'authapp:home' %}">NewsDetect</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
     </div>
@@ -10,7 +10,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li>
-          <a class="nav-link scrollto active" href="#hero">Home</a>
+          <a class="nav-link scrollto active" href="{% url 'authapp:home' %}">Home</a>
         </li>
         <li>
           <a class="nav-link scrollto" href="#about">About</a>
@@ -19,7 +19,7 @@
           <a class="nav-link scrollto" href="#services">Services</a>
         </li>
         <li>
-          <a class="nav-link scrollto" href="#portfolio">Detect News</a>
+          <a class="nav-link scrollto" href="{% url 'apiapp:detect' %}">Detect News</a>
         </li>
         <li>
           <a class="nav-link scrollto" href="#pricing">Read</a>
@@ -38,13 +38,13 @@
     <nav id="navbar" class="navbar">
       <ul class="">
         <li>
-          <a class="nav-link scrollto active" href="#hero">Home</a>
+          <a class="nav-link scrollto active" href="{% url 'authapp:home' %}">Home</a>
         </li>
         <li>
           <a class="nav-link scrollto" href="{% url 'authapp:login' %}">Login</a>
         </li>        
         <li>
-          <a class="nav-link scrollto" href="#about">Sign Up</a>
+          <a class="nav-link scrollto" href="{% url 'authapp:signup' %}">Sign Up</a>
         </li>
       </ul>
     </nav>

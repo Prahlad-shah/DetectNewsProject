@@ -81,15 +81,21 @@
         <input height = 100px width = 30px type = "text" id = "news" name = "news" required>
         <input type = "submit" value = "Verify">    
     </form>
-    {% if val%}
-    <p id = "text"> <strong id = "large">{{res}} : {{val}}</strong> 
-    </p>
+    <br>
+    {% if val %}
+    <h5 id = "text" class="text-center"> <strong id = "large">The News Seems To Be {{res}}  </strong> </h5>
+    <br>
+    <h6 class="card-text">{{news}}</h6>
+    {% comment %} <a href="#" class="btn btn-primary align-items-center">Follow Link {{val}} </a> {% endcomment %}
+  </div>
     {% endif %}
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div>
+
     </div>
     </div>
     </div>
+
+
     <!-- start card - 2 -->
     <div class="card text-center w-100 my-2">
         <div class="card-header">

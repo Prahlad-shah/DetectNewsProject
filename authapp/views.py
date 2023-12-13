@@ -27,6 +27,7 @@ class UserLoginView(TemplateView):
     pageStatus = 1
     pageTitle = 'Login'
     loginActive = 'active'
+    success_url = reverse_lazy('authapp:home')
     extra_context={'pageTitle': pageTitle, 'pageStatus': pageStatus, 'loginkActive': loginActive }
 
 from django.utils.translation import gettext_lazy as _
