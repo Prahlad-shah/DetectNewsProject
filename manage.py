@@ -20,3 +20,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+SITE_OWNER = 'Prahlad Shah'
+print(f'Site Owner {SITE_OWNER}')
